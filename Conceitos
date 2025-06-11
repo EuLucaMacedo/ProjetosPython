@@ -1,0 +1,26 @@
+'''Manipulando Texto
+
+frase = 'string'
+cadeia de texto
+print(frase[])
+
+análisar String
+len(frase)
+frase.count('o')
+frase.find('Android')
+frase.replace('Python','Android')
+frase.upper()
+frase.lower()
+frase.capitalize()
+frase.title()
+frase.strip()
+frase.rstrip()
+frase.lstrip()
+
+Divisao String
+frase.split()
+
+Junçao String
+'-'.join(frase)
+
+'''
