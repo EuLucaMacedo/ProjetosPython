@@ -23,4 +23,8 @@ frase.split()
 Junçao String
 '-'.join(frase)
 
-'''
+'''Condições Simples e Compostas
+if verdade.verdade:
+    Verdade true
+else:
+    verdade false
