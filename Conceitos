@@ -28,3 +28,7 @@ if verdade.verdade:
     Verdade true
 else:
     verdade false
+
+'''Cores no Termial
+Ansi - escape sequence
+\033[m
