@@ -32,3 +32,12 @@ else:
 '''Cores no Termial
 Ansi - escape sequence
 \033[m
+
+''' Codições Aninhadas
+
+if carro.esquerda():
+    bloco01
+elif carro.direita():
+    bloco02
+else:
+    bloco03
