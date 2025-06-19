@@ -1,26 +1,26 @@
 from datetime import datetime
 
-valor_casa = float(input('\033[31mQual o Valor da Casa: \033[m'))
+'''valor_casa = float(input('\033[31mQual o Valor da Casa: \033[m'))
 salario = float(input('\033[32mQual o Salário: \033[m'))
 anos = int (input('\033[33mEm quantos anos faz o pagamento total: \033[m'))
 
 emprestimo = valor_casa / (anos * 12)
-por = (30/ 100) * emprestimo
-if salario < por:
-    print(f'Salario não Autorizado para o Emprestimo de {emprestimo: .2f} por mês!')
-else:
+por = emprestimo * 30/ 100
+if emprestimo <= por:
     print(f'Parabens Emprestimo de {emprestimo: .2f} por mês AUTORIZADO!')
+else:
+    print(f'Salario não Autorizado para o Emprestimo de {emprestimo: .2f} por mês!')
 
 print("=" * 50)
 
 numero = int(input('\033[35mDigite o Numero que Deseja fazer a conversão: \033[m'))
 respo = int(input('\033[31mDigite 1 para Binário, 2 para Octal ou 3 para Hexadecimal: \033[m'))
 if respo == 1:
-    print('Binario')
+    print(f'{numero} convertido para Binário é igual a {bin(numero)}')
 elif respo == 2:
-    print ('Octal')
+    print (f'{numero} convertido para Binário é igual a {oct(numero)}')
 else:
-    print('Hexadecimal')
+    print(f'{numero} convertido para Binário é igual a {hex(numero)}')
 
 print ("=" * 50)
 
@@ -54,6 +54,7 @@ print('=' * 50)
 media_um = float(input('\033[35mDigite a Primeira nota: '))
 media_dois = float(input('Digite a Segunda Nota: \033[m'))
 media = (media_um + media_dois) / 2
+print(f'A média do Aluno é igual a {media}.')
 if media < 5:
     print('REPROVADO!')
 elif media >= 5 and media <= 6.9:
@@ -66,33 +67,38 @@ print('=' * 50)
 ano_nasc = int(input('\033[36mQual o Ano do Nascimento: \033[m'))
 data_atual = datetime.now().year
 parabens = data_atual - ano_nasc
+print(f'A Idade do Atleta é: {parabens}')
 if parabens <= 9:
-    print('Mirim!')
+    print('Classificação: Mirim!')
 elif parabens <= 14:
-    print('Infantil!')
+    print('Classificação: Infantil!')
 elif parabens <= 19:
-    print('Junior!')
-elif parabens == 20:
-    print('Sênior!')
+    print('Classificação: Junior!')
+elif parabens <= 25:
+    print('Classificação: Sênior!')
 else:
-    print('Master!')
+    print('Classificação: Master!')
 
-print('=' * 50)
+print('=' * 50)'''
 
-valor_produto = float(input('\033[33mQual o Valor do Produto a ser Pago: R$'))
-pagamento = input('Qual a Condição do Pagamente: \nDinheiro, Cartao, 2x ou 3x\033[m')
+valor_produto = float(input('\033[33mQual o Valor do Produto a ser Pago: R$ '))
+pagamento = input('Qual a Condição do Pagamente: \n[ 1 ] Dinheiro\n[ 2 ] Credito\nDigite o Numero da Opção: \033[m')
 
-if pagamento == 'Dinheiro':
-    cento = (10/100) * valor_produto
-    print(f'Pagamento com 10% de Desconto, igual a R${cento - valor_produto}. ')
-elif pagamento == 'Cartao':
-    cento = (5/100) * valor_produto
-    print(f'Pagamento com 05% de Desconto, igual a R${cento - valor_produto}.')
-elif pagamento == '2x':
-    print(f'Pagamento em Duas Vezes de R${valor_produto/2}.')
-elif pagamento == '3x':
-    print(f'Pagamento em Três Vezes de R${valor_produto/3}.')
+if pagamento == '1':
+    cento = valor_produto * 10/100
+    print(f'Pagamento com 10% de Desconto, igual a R${valor_produto - cento}. ')
+elif pagamento == '2':
+    credito = input("\033[34mPagamento:\n[ 1 ] A Vista\n[ 2 ] 2x\n[ 3 ] 3x\nDigite o Numero da Opção: \033[m")
+    if credito == '1':
+        cento = valor_produto * 5/100
+        print(f'Pagamento com 05% de Desconto, igual a R${valor_produto - cento}.')
+    elif credito == '2':
+        print(f'Pagamento em Duas Vezes de R${valor_produto/2}.')
+    elif credito == '3':
+        print(f'Pagamento em Três Vezes de R${valor_produto/3}.')
+    else:
+        print('Opção Indisponivel!')
 else:
-    print('Pagamento Indisponivel!')
+    print('Opção Indisponivel!')
 
 print('Obrigado Pelos Códigos!')
