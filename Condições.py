@@ -15,7 +15,8 @@ if respo == 'sim':
     if velocidade > 80:
         excesso = velocidade - 80
         multa = excesso * 7
-        print(f'\033[31mVocê Foi Multado, o Valor a se pagar R${multa:.2f}\033[m')
+        print(f'\033[31mVocê Foi Multado, o Valor a se pagar R${multa:.2f}\033[m'
+              f'')
     else:
         print('Velocidade dentro dos Limites!')
 else:

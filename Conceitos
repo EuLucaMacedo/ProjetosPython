@@ -41,3 +41,9 @@ elif carro.direita():
     bloco02
 else:
     bloco03
+
+''' Laços de Repetição
+
+for c in range(1,10):
+    passo
+pega
