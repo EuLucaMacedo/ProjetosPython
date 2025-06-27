@@ -6,6 +6,7 @@
 - Condições (Códigos com aplicações de condições simples e compostas)
 - Condições Aninhadas (Diversos Exercicios Python)
 - Estruturas de Repetição (Varios códigos implementando estrutura de repetição FOR)
+- Estruturas de Repetição (Varios códigos implementando estrutura de repetição WHILE)
 - Teste (Teste de algumas funcionalidades ainda em analise e implementações)
  
 ## Desenvolvedor 
