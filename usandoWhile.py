@@ -1,31 +1,27 @@
+#Validação de uma Informação
 while True:
-    sexo = input('Digite o seu sexo [M/F]: ').upper()
+    sexo = input('Digite o seu sexo [M/F]: ').upper()[0]
     if sexo in ['M', 'F']:
+        print(f'Sexo {sexo} Registrado com Sucesso!')
         break
     else:
         print('Digite uma Opção Valida!\n')
 
 print('Fim do Programa')
 
-intervalo = 10
+#Fatorando um Número
+fatorial = int(input('Digite um número: '))
+i = fatorial
+f = 1
+print(f'Calculando {fatorial}', end='')
+while i > 0:
+    print(f'i', end='')
+    print(' x ' if i > 1 else ' = ', end='')
+    f *= i
+    i -= 1
 
-while True:
-    respo = input('\nDeseja Fazer nosso Programa: [S/N] ').upper()
-    if respo == 'S':
 
-        termo = int(input('\nDigite o Primeiro Valor da Sequencia: '))
-        razao = int(input('Digite o Intervalo entre os Numeros: '))
-
-        while intervalo > 0:
-            termo += razao
-            intervalo -= 1
-            print(f'{termo} ...', end='' )
-
-    else:
-        break
-
-print('Acacou')
-
+#Sequencia de Fibonacci
 n = int(input('Digite a Posição: '))
 a = 0
 b = 1
@@ -40,6 +36,7 @@ while posicao < n:
 
 print('Acabou!')
 
+#Somando Números
 quant_Num = 0
 tot_Num = 0
 respo = 0
@@ -53,17 +50,19 @@ while True:
 print(f'A Quantidade de Numeros Digitados {quant_Num}')
 print(f'A Soma entre os Numeros Digitados {tot_Num}')
 
+#Analizando vários valores
 respo = ''
 maior_num = 0
 menor_num = 100000000
 quantos_numeros = 0
 soma_num = 0
 while True:
-    respo = input('Deseja Adicionar um Numero: [S/N] ').upper()
-    if respo == 'N':
-        break
+    try:
+        num = int(input('Digite um Numero: '))
+    except ValueError:
+        print('Entrada inválida. Digite um número inteiro.')
+        continue
 
-    num = int(input('Digite um Numero: '))
     if num > maior_num:
         maior_num = num
     if num < menor_num:
@@ -72,9 +71,18 @@ while True:
     soma_num += num
     quantos_numeros += 1
 
-print(f'A Média entre os Número é igual {num/quantos_numeros}')
-print(f'O Menor Número digitado foi {menor_num}')
-print(f'O Maior Número digitado foi {maior_num}')
+    respo = input('Deseja Adicionar um Numero: [S/N] ').upper()[0]
+    if respo == 'N':
+        break
+    elif respo != 'S':
+        print('Resposta Invalida!')
+
+if quantos_numeros > 0:
+    print(f'A Média entre os Número é igual {soma_num/quantos_numeros}')
+    print(f'O Menor Número digitado foi {menor_num}')
+    print(f'O Maior Número digitado foi {maior_num}')
+else:
+    print('\nNenhum número foi digitado.')
 
 
 
