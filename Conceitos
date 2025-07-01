@@ -55,3 +55,8 @@ while c < 10:
     print(c)
     c += 1
 print('Fim')
+
+''' Interrompendo Repetições
+while True:
+    break
+print('Programa Execultado com Sucesso')
