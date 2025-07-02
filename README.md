@@ -17,6 +17,7 @@
 ### 🔁 Estruturas de Repetição
 - Comando `for` com `range()`, listas, strings, etc.
 - Comando `while` com validações e menus interativos
+- Controle de fluxo com `break` para encerramento condicional de loops
 
 ### 🧪 Testes e Prototipagem
 - Teste de funcionalidades em fase de análise
