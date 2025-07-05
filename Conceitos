@@ -60,3 +60,24 @@ print('Fim')
 while True:
     break
 print('Programa Execultado com Sucesso')
+
+'''Variaveis Compostas Tuplas
+Tuplas são imutáveis
+
+variavel = ('A', 'B', 'C')
+print (variavel[1])
+
+for cont in range(0, len(variavel)):
+    print(f'Eu vou fazer {variavel[cont]} na posição {cont}')
+
+for c in variavel:
+    print(f'Eu vou Fazer {variavel}')
+
+for pos, c in enumerate(variavel):
+    print(f'eu vou {c} na posição {pos}'
+
+sorted(variavel)  - coloca a tupla em ordem
+variavel.count(2) - conta quantas vezes a variavel aparece na tupla
+variavel.index(2) - avisa a posição do texto na tupla
+del(variavel) - apagando variavel da memoria
+
