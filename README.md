@@ -19,6 +19,9 @@
 - Comando `while` com validações e menus interativos
 - Controle de fluxo com `break` para encerramento condicional de loops
 
+### 📦 Variáveis Compostas
+- Utilização de **tuplas (`tuple`)** para armazenar e manipular coleções de dados imutáveis
+
 ### 🧪 Testes e Prototipagem
 - Teste de funcionalidades em fase de análise
 - Blocos de código com foco em lógica e correção de erros
