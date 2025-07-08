@@ -2,8 +2,6 @@
 maior = 0
 menor = 0
 contador = 0
-posicao_menor = 0
-posicao_maior = 0
 listanumerica = list()
 for c in range(0,5):
     listanumerica.append(int(input(f'Digite o {c + 1}° Numero: ')))
@@ -17,14 +15,20 @@ for c, n in enumerate(listanumerica):
 
     elif maior < n:
         maior = n
-        posicao_maior = c
 
     elif menor > n:
         menor = n
-        posicao_menor = c
 
-print(f'O maior número Digitado foi {maior} na posição {posicao_maior + 1}')
-print(f'O menor número digitado foi {menor} na posição {posicao_menor + 1}')
+print(f'O maior número Digitado foi {maior} na posição ', end='')
+for i, v in enumerate(listanumerica):
+    if v == maior:
+        print(f'{i + 1}... ', end='')
+print()
+print(f'O menor número digitado foi {menor} na posição ', end='')
+for i, v in enumerate(listanumerica):
+    if v == menor:
+        print(f'{i + 1}... ', end='')
+print()
 
 #Adicionando um número na lista sem se repetir!
 num = []
@@ -50,7 +54,7 @@ while True:
     if respo == 'N':
         break
 
-print(f'Número Adicionados: {sorted(num)}')
+print(f'Números Adicionados: {sorted(num)}')
 
 #Extraindo dados de uma Lista
 
@@ -119,30 +123,23 @@ for c in numeros_alinhados:
 print(f'Lista de Números Pares: {numeros_par}' if len(numeros_par) > 0 else 'Não Existe Números Pares na Lista!')
 print(f'Lista de Números Ímpares: {numeros_impar}' if len(numeros_impar) > 0 else 'Não Existe Números Ímpares na Lista!')
 
-'''#Inserindo na Lista
+#Inserindo na Lista
 
 ordem = []
-while True:
-    while True:
-        try:
-            teste = int(input('Digite Um Numero: '))
-            if teste < 0:
-                print('❌ Digite um Número Válido!')
-                continue
-                
-            else:
-                for c in teste:
-                    if teste < c:
-                        ordem.insert(0, teste)
-                        print(f'Adicionando na posição {c}.')
-                    else:
-                        ordem.append(teste)
-                        print('Adicionando ao final da Lista')
+for c in range(0, 5):
+    n = int(input('Digite um valor: '))
+    if c == 0 or n > ordem[-1]:
+        ordem.append(n)
+        print('Adicionado ao final da lista ...')
+    else:
+        pos = 0
+        while pos < len(ordem):
+            if n <= ordem[pos]:
+                ordem.insert(pos, n)
+                print(f'Adicionado na posição {pos} da lista ...')
                 break
-        except ValueError:
-            print('❌ Entrada inválida. Digite apenas números inteiros.')
+            pos += 1
+print(f'Os valores digitados em ordem foram {ordem}')
 
-    if teste == 0:
-        break
-print(ordem)'''
+
 
