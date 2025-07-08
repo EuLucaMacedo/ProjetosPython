@@ -81,3 +81,32 @@ variavel.count(2) - conta quantas vezes a variavel aparece na tupla
 variavel.index(2) - avisa a posição do texto na tupla
 del(variavel) - apagando variavel da memoria
 
+''' Listas
+variavel = [Itens da lista]
+inserindo item na lista
+variavel[3] = 'item'
+variavel.append('iten') - inseri um iten no final da lista
+variavel.insert(0, 'iten') - inseri um iten na posição necessaria
+
+apagar itens da Lista
+del variavel[0] -
+variavel.pop(3) - elimina o indice que eu quero eliminar
+variavel.remove('Iten') - elimina o iten que eu quero eliminar
+
+variavel = list(range(0, 10)) - cria uma lista de 0 ate 09
+variavel.sort() - coloca em ordem a lista
+variavel.sort(reverse = true) - coloca a lista em ordem reversa
+len(variavel) - quantos elementos eu tenho na lista
+
+variavelB = variavelA[:] - faz uma copia da variavel
+
+exemplo:
+
+variavel = list()
+for c in range(0 ,5):
+    variavel.append(int(input('Digite um Valor: ')))
+
+for c, v in enumerate(variavel):
+    print(f'Na Posição {c} encontrei o valor {v}!')
+print('Cheguei ao Final da Lista')
+
