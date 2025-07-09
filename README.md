@@ -21,6 +21,7 @@
 
 ### 📦 Variáveis Compostas
 - Utilização de **tuplas (`tuple`)** para armazenar e manipular coleções de dados imutáveis
+- Criação e desenvolvimento de Listas
 
 ### 🧪 Testes e Prototipagem
 - Teste de funcionalidades em fase de análise
