@@ -7,8 +7,3 @@ print(lista)
 print((sorted(lista)))
 print(f'Maior Número: {maiornumero}')
 print(f'Segundo mmaior Número: {segundomaior}')
-
-
-
-
-

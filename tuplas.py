@@ -57,4 +57,3 @@ for c in núm:
         print(f'{c}... ', end='')
 
 print('Fim do Programa!')
-
