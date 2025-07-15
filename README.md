@@ -20,8 +20,9 @@
 - Controle de fluxo com `break` para encerramento condicional de loops
 
 ### 📦 Variáveis Compostas
-- Utilização de **tuplas (`tuple`)** para armazenar e manipular coleções de dados imutáveis
-- Criação e desenvolvimento de Listas
+- Utilização de **tuplas (`tuple`)** para armazenar coleções de dados imutáveis
+- Criação, manipulação e iteração de **listas (`list`)**
+- Implementação de **matrizes (listas aninhadas)** para representar dados em duas dimensões
 
 ### 🧪 Testes e Prototipagem
 - Teste de funcionalidades em fase de análise
