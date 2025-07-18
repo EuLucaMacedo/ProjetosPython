@@ -2,6 +2,7 @@ import random
 import time
 from time import sleep
 
+#Lista Composta e Análise de Dados
 dados = []
 nome  = []
 peso = []
@@ -53,21 +54,18 @@ from itertools import count
 
 #Lista com pares e ímpares
 
-lista_num = []
-lista_par = []
-lista_impar = []
+lista_num = [[], []]
 
 for c in range(7):
     valor = int(input(f'Digite o {c + 1}° Valor: '))
-    lista_num.append(valor)
 
     if valor % 2 == 0:
-        lista_par.append(lista_num)
+        lista_num[0].append(valor)
     else:
-        lista_impar.append(lista_num)
+        lista_num[1].append(valor)
 print(f'Os Valores digitados foram {sorted(lista_num)}')
-print(f'Os Valores pares digitados foram: {sorted(lista_par)}' if lista_par > 0 else 'Não Existe Número Par na Lista!')
-print(f'Os valores ímpares digitados foram: {sorted(lista_impar)}' if lista_impar > 0 else 'Não Existe Número Ímpar na Lista!')
+print(f'Os Valores pares digitados foram: {sorted(lista_num[0])}' if len(lista_num[0]) > 0 else 'Não Existe Número Par na Lista!')
+print(f'Os valores ímpares digitados foram: {sorted(lista_num[1])}' if len(lista_num[1]) > 0 else 'Não Existe Número Ímpar na Lista!')
 
 #Matrizes
 linhas = 3
@@ -111,5 +109,41 @@ for c in range(1, palpite + 1):
     
 print(f'\n{'=' * 5} BOA SORTE {'=' * 5}')
 
+#Boletim de notas com Média
 
+dados = list()
+while True:
+    nome_aluno = input('Nome: ')
+    nota_um = float(input('Nota 01: '))
+    nota_dois = float(input('Nota 02: '))
+    media_aluno = (nota_um + nota_dois) / 2
 
+    dados.append([nome_aluno, [nota_um, nota_dois], media_aluno] )
+
+    while True:
+        cont_respo = input('Deseja Continuar: [S, N] ').upper()[0]
+        if cont_respo in ['S', 'N']:
+            break
+        else:
+            print('❌ Respota Inválida. Digite S ou N.')
+
+    if cont_respo == 'N':
+        break
+
+print('=' * 50)
+print(f'{'N°': <4}{'Nome': <10}{'Média': >8}')
+print('-' * 50)
+for i, c in enumerate(dados):
+    print(f'{i: <4}{c[0]: <10}{c[2]: >8}')
+
+while True:
+    print('-' * 35)
+    opc = int(input('Mostrar notas de qual alunos? [999 para parar]: '))
+    if opc == 999:
+        print('Finalizado!')
+        break
+    if opc <= len(dados) - 1:
+        print(f'Notas de {dados[opc][0]}: {dados[opc][1]}')
+    else:
+        print('⚠️ Aluno não encontrado.')
+print('Programa Encerrado!')
